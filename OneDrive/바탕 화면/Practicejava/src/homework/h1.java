@@ -18,15 +18,15 @@ public class h1 {
 			while(true) {
 				num = sc.nextLine();
 				if(Integer.parseInt(num) > randnum) {
-					System.out.println("더 낮게");
+					System.out.print("더 낮게\n>>");
 					} else if(Integer.parseInt(num) < randnum) {
-					System.out.println("더 높게");
+					System.out.print("더 높게\n>>");
 					} else {
 						System.out.println("정답입니다.");
 						break;
 					}
 				}
-			System.out.println("게임을 종료하시겠습니까?(y/n) >>");
+			System.out.print("게임을 종료하시겠습니까?(y/n) >>");
 			ans = sc.nextLine();
 			if("y".equals(ans)) {
 				System.out.printf("=========================\n    숫자맞추기 게임 종료\n=========================");
