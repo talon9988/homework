@@ -5,6 +5,7 @@ public class h1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int randnum;
+		boolean c = true;
 
 		String num, ans;
 		while(true) {
@@ -26,12 +27,22 @@ public class h1 {
 						break;
 					}
 				}
-			System.out.print("게임을 종료하시겠습니까?(y/n) >>");
-			ans = sc.nextLine();
-			if("y".equals(ans)) {
-				System.out.printf("=========================\n    숫자맞추기 게임 종료\n=========================");
-				break;
-			} 
+			while(true) {
+				System.out.print("게임을 종료하시겠습니까?(y/n) >>");
+				ans = sc.nextLine();
+				if("y".equals(ans)) {
+					System.out.printf("=========================\n    숫자맞추기 게임 종료\n=========================");
+					c = false;
+					break;
+				} 
+				else if("n".equals(ans)) {
+					break;
+				}
+				else if(!("n".equals(ans)) && !("y".equals(ans))) {
+					System.out.println("장난치지 마세요");
+				}
+			}
+			if(c == false) break;
 		}
 	}
 
